@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Deporte en Acción - Tu Portal Deportivo</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header>
+ <nav class="container">
+ <div class="logo">Deporte en Acción</div>
+ <ul class="nav-links">
+ <li><a href="#" onclick="showSection('home')">Inicio</a></li>
+ <li><a href="#" onclick="showSection('news')">Noticias</a></li>
+ <li><a href="#" onclick="showSection('sports')">Deportes</a></li>
+ <li><a href="#" onclick="showSection('calendar')">Calendario</a></li>
+ <li><a href="#" onclick="showSection('forum')">Foro</a></li>
+ <li><a href="#" onclick="showSection('multimedia')">Multimedia</a></li>
+ </ul>
+ </nav>
+ </header>
+
+ <main class="container">
+ <!-- Home Section -->
+ <section id="home" class="section active">
+ <div class="hero">
+ <h1>Deporte en Acción</h1>
+ <p>Tu portal deportivo completo con noticias, análisis y toda la emoción del deporte</p>
+ </div>
+
+ <div class="cards-grid">
+ <div class="card">
+ <h3>📰 Noticias Actualizadas</h3>
+ <p>Mantente al día con las últimas noticias deportivas, resultados en tiempo real y coberturas exclusivas de todos los deportes.</p>
+ </div>
+ <div class="card">
+ <h3>🎯 Análisis Experto</h3>
+ <p>Contenido de calidad con análisis profundos de expertos, estadísticas detalladas y perspectivas únicas del mundo deportivo.</p>
+ </div>
+ <div class="card">
+ <h3>⚽ Deportes Específicos</h3>
+ <p>Secciones dedicadas a fútbol, baloncesto, tenis y más deportes con información especializada y actualizada.</p>
+ </div>
+ <div class="card">
+ <h3>📅 Calendario de Eventos</h3>
+ <p>No te pierdas ningún evento importante con nuestro calendario completo de competiciones y torneos deportivos.</p>
+ </div>
+ <div class="card">
+ <h3>💬 Foro de Fanáticos</h3>
+ <p>Conecta con otros aficionados, discute, debate y comparte tu pasión por el deporte en nuestra comunidad activa.</p>
+ </div>
+ <div class="card">
+ <h3>📱 Redes Sociales</h3>
+ <p>Comparte contenido fácilmente en todas las plataformas sociales y mantente conectado con la comunidad deportiva.</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- News Section -->
+ <section id="news" class="section">
+ <h2>Noticias y Resultados</h2>
+ <div id="news-container">
+ <div class="news-item">
+ <div class="news-meta">Hace 2 horas • Fútbol</div>
+ <h3>Real Madrid vence 3-1 al Barcelona en El Clásico</h3>
+ <p>Un partido espectacular donde los merengues se impusieron con goles de Benzema, Modrić y Vinicius Jr. El Barcelona descontó con Pedri en el segundo tiempo.</p>
+ </div>
+ <div class="news-item">
+ <div class="news-meta">Hace 4 horas • Baloncesto</div>
+ <h3>Lakers derrotan a Warriors 118-112 en un duelo épico</h3>
+ <p>LeBron James lideró la victoria con 35 puntos y 8 asistencias en un encuentro que se definió en los últimos minutos del cuarto período.</p>
+ </div>
+ <div class="news-item">
+ <div class="news-meta">Hace 6 horas • Tenis</div>
+ <h3>Nadal avanza a semifinales de Roland Garros</h3>
+ <p>El español demostró una vez más su dominio en tierra batida venciendo en sets corridos a su rival en una exhibición de tenis.</p>
+ </div>
+ </div>
+
+ <div class="social-share">
+ <button class="social-btn facebook" onclick="shareContent('facebook')">f</button>
+ <button class="social-btn twitter" onclick="shareContent('twitter')">🐦</button>
+ <button class="social-btn instagram" onclick="shareContent('instagram')">📷</button>
+ <button class="social-btn youtube" onclick="shareContent('youtube')">▶️</button>
+ </div>
+ </section>
+
+ <!-- Sports Section -->
+ <section id="sports" class="section">
+ <h2>Deportes Específicos</h2>
+ <div class="sports-menu">
+ <button class="sport-btn active" data-sport="futbol">⚽ Fútbol</button>
+ <button class="sport-btn" data-sport="baloncesto">🏀 Baloncesto</button>
+ <button class="sport-btn" data-sport="tenis">🎾 Tenis</button>
+ </div>
+
+ <div id="sport-content">
+ <div id="futbol-content" class="sport-section">
+ <div class="cards-grid">
+ <div class="card">
+ <h3>La Liga</h3>
+ <p><strong>Real Madrid 85 pts</strong><br>
+ Barcelona 78 pts<br>
+ Atlético Madrid 71 pts</p>
+ </div>
+ <div class="card">
+ <h3>Champions League</h3>
+ <p>Próximos partidos de semifinales:<br>
+ Real Madrid vs Manchester City<br>
+ Liverpool vs Villarreal</p>
+ </div>
+ <div class="card">
+ <h3>Mundial Qatar 2022</h3>
+ <p>Análisis completo de la Copa del Mundo, estadísticas de jugadores y equipos destacados.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Calendar Section -->
+ <section id="calendar" class="section">
+ <h2>Calendario de Eventos</h2>
+ <div class="calendar">
+ <div class="calendar-header">
+ <button onclick="previousMonth()">←</button>
+ <h3 id="calendar-month">Julio 2025</h3>
+ <button onclick="nextMonth()">→</button>
+ </div>
+ <div class="calendar-grid" id="calendar-grid">
+ <div class="calendar-day">Dom</div>
+ <div class="calendar-day">Lun</div>
+ <div class="calendar-day">Mar</div>
+ <div class="calendar-day">Mié</div>
+ <div class="calendar-day">Jue</div>
+ <div class="calendar-day">Vie</div>
+ <div class="calendar-day">Sáb</div>
+ <!-- Días del mes -->
+ <div class="calendar-day">1</div>
+ <div class="calendar-day">2</div>
+ <div class="calendar-day event-day" title="Final Copa América">3</div>
+ <div class="calendar-day">4</div>
+ <div class="calendar-day">5</div>
+ <div class="calendar-day event-day" title="Wimbledon Final">6</div>
+ <div class="calendar-day">7</div>
+ <div class="calendar-day">8</div>
+ <div class="calendar-day">9</div>
+ <div class="calendar-day event-day" title="NBA Summer League">10</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Forum Section -->
+ <section id="forum" class="section">
+ <h2>Foro de Discusión</h2>
+ <div id="forum-container">
+ <div class="forum-post">
+ <div class="post-header">
+ <span class="post-author">@FutbolFanático</span>
+ <span class="post-time">Hace 15 min</span>
+ </div>
+ <p>¿Qué opinan del nuevo fichaje del Real Madrid? ¿Creen que es lo que necesitaba el equipo para la próxima temporada?</p>
+ <div style="margin-top: 1rem;">
+ <button onclick="likePost(this)" style="background: none; border: none; color: #ff6b6b; cursor: pointer;">❤️ 23</button>
+ <button onclick="replyPost()" style="background: none; border: none; color: #4ecdc4; cursor: pointer; margin-left: 1rem;">💬 Responder</button>
+ </div>
+ </div>
+
+ <div class="forum-post">
+ <div class="post-header">
+ <span class="post-author">@BasketLover</span>
+ <span class="post-time">Hace 1 hora</span>
+ </div>
+ <p>Los Lakers están en una forma increíble esta temporada. LeBron sigue demostrando que la edad es solo un número. ¿Podrán llegar a los playoffs?</p>
+ <div style="margin-top: 1rem;">
+ <button onclick="likePost(this)" style="background: none; border: none; color: #ff6b6b; cursor: pointer;">❤️ 45</button>
+ <button onclick="replyPost()" style="background: none; border: none; color: #4ecdc4; cursor: pointer; margin-left: 1rem;">💬 Responder</button>
+ </div>
+ </div>
+
+ <div class="forum-post">
+ <div class="post-header">
+ <span class="post-author">@TenisExpert</span>
+ <span class="post-time">Hace 2 horas</span>
+ </div>
+ <p>Nadal en Roland Garros es simplemente mágico. 14 títulos en París y sigue siendo el rey de la tierra batida. ¿Habrá alguien que pueda superar este récord?</p>
+ <div style="margin-top: 1rem;">
+ <button onclick="likePost(this)" style="background: none; border: none; color: #ff6b6b; cursor: pointer;">❤️ 67</button>
+ <button onclick="replyPost()" style="background: none; border: none; color: #4ecdc4; cursor: pointer; margin-left: 1rem;">💬 Responder</button>
+ </div>
+ </div>
+ </div>
+
+ <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+ <h3 style="margin-bottom: 1rem; color: #ff6b6b;">Crear Nueva Publicación</h3>
+ <textarea id="new-post" placeholder="¿Qué quieres discutir sobre deportes?" style="width: 100%; height: 100px; padding: 1rem; border: 2px solid #eee; border-radius: 10px; resize: vertical;"></textarea>
+ <button onclick="createPost()" style="margin-top: 1rem; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); color: white; border: none; padding: 0.8rem 2rem; border-radius: 25px; cursor: pointer;">Publicar</button>
+ </div>
+ </section>
+
+ <!-- Multimedia Section -->
+ <section id="multimedia" class="section">
+ <h2>Contenido Multimedia</h2>
+ <div class="cards-grid">
+ <div class="card">
+ <h3>📹 Videos Destacados</h3>
+ <p>Resúmenes de partidos, entrevistas exclusivas, análisis tácticos y los mejores momentos del deporte mundial.</p>
+ <div style="margin-top: 1rem;">
+ <div style="background: #f0f0f0; height: 150px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #888;">
+ 🎬 Video Player
+ </div>
+ </div>
+ </div>
+ <div class="card">
+ <h3>📊 Estadísticas Interactivas</h3>
+ <p>Gráficos dinámicos, comparativas de jugadores, análisis de rendimiento y estadísticas avanzadas.</p>
+ <div style="margin-top: 1rem;">
+ <div style="background: #f0f0f0; height: 150px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #888;">
+ 📈 Gráficos Interactivos
+ </div>
+ </div>
+ </div>
+ <div class="card">
+ <h3>🎙️ Podcasts Deportivos</h3>
+ <p>Escucha nuestros podcasts semanales con análisis experto, entrevistas y debates sobre la actualidad deportiva.</p>
+ <div style="margin-top: 1rem;">
+ <div style="background: #f0f0f0; height: 150px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #888;">
+ 🎧 Reproductor de Audio
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ </main>
+
+ <script src="script.js"></script>
+</body>
+</html>
